@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Source Code Pro";
+    color: #464646;
+}
+
+.flex-container {
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+.column {
+
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*----------LEFT SECTION----------*/
+
+#left {
+    background-color: white;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding-bottom: 0.6em;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+.caption {
+    padding: 1em 1.2em;
+    font-size: 18px;
+}
+
+
+/*----------RIGHT SECTION---------*/
+
+#right {
+    background-color: lightgrey;
+    position: relative;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0;
+    position: absolute;
+    top: 11%;
+
+}
+
+.info {
+    width: 60%;
+
+}
+
+li {
+    padding: 10px;
+    line-height: 1.6;
+    font-size: 0.75rem;
+}
+
+li:nth-child(3) input{
+    border: none;
+    outline: none;
+    padding: 1px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+li:nth-child(4) button{
+    border-radius: 50px;
+    border: none;
+    padding: 8px 20px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: lightblue;
+}
+
+/*--------BOTTOM TEXT-------------*/
+
+main > div:nth-child(3) {
+    height: 60px;
+    width: 300px;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+
+#seemore p {
+    margin: 5px;
+}
+
+
+/*--------------MEDIA QUERIES------------*/
+
+@media screen and (max-width: 870px) {
+    .flex-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .column {
+        padding: 3rem 0;
+    }
+
+    .info {
+        width: 70%;
+    }
+
+    #seemore {
+        display: none;
+    }
+
+    h1 {
+        top: 1rem;
+        font-size: 1.25rem;
+        padding-bottom: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .column {
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    li {
+        font-size: 0.625rem;
+    }
+
+}
+
+
+@media screen and (min-width: 1500px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+
+    .info {
+        width: 50%;
+    }
+}
+
+
+
